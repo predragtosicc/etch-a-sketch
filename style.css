@@ -6,12 +6,24 @@ body{
     align-items: center;
 }
 
+.main{
+    display: flex;
+    gap: 50px;
+}
+
 .main-container{
     border: solid 1px black;
     height: 600px;
     width: 600px;
     display: flex;
     flex-direction: column;
+}
+
+.side-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .column-div{

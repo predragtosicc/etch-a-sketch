@@ -1,21 +1,29 @@
 
 let mainContainer = document.querySelector('.main-container');
 
-function drawDiv(col = 16,row = 16){
+function drawDiv(n){
     // Loop for creating column, and row divs
-    for (let i = 0; i < 16; i++){
+    for (let i = 0; i < n; i++){
         let divColumn = document.createElement('div')
         divColumn.classList.add('column-div');
         mainContainer.appendChild(divColumn);
-        for (let j = 0; j < 16; j++){
+        for (let j = 0; j < n; j++){
             let divRow = document.createElement('div');
             divRow.classList.add('row-div');
             divColumn.appendChild(divRow);
         }
     }
 }
+const nOfDivs = document.querySelector('.slider');
+nOfDivs.addEventListener('input', function() {
+    document.querySelector('.slider-label').textContent = this.value.toString() + "x" + this.value.toString();
+    nOfDivs.setAttribute('value', this.value);
+    nOfDivs.refresh();  
+    console.log(nOfDivs.value);
+});
 
-drawDiv()
+drawDiv(nOfDivs.value)
+
 // Creating a array out of all the row divs
 const divs = document.querySelectorAll('.row-div');
 const divsArr = Array.from(divs);
