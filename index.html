@@ -10,13 +10,30 @@
 </head>
 <body>
     <div class = "main">
-        <form>
-            <div class="side-container">
-                <label for="size" class = 'slider-label'>16x16</label>
-                <input type="range" min="16" max="64" value="16" class="slider" id="size">
-            </div> 
-        </form>
-        
+        <div class="side-container">
+            <div class = "grid-size">
+                <div class="radio-holder">
+                    <label for="16">16</label>
+                    <input type="radio" value = "16" id = "16" name = "size" checked>
+                </div>
+                <div class="radio-holder">
+                    <label for="32">32</label>
+                    <input type="radio" value = "32" id = "32" name = "size">
+                </div>
+                <div class="radio-holder">
+                    <label for="64">64</label>
+                    <input type="radio" value = "64" id = "64" name = "size">
+                </div>
+                <div class="radio-holder">
+                    <label for="128">128</label>
+                    <input type="radio" value = "128" id = "128" name = "size">
+                </div>
+                
+                
+                
+            </div>
+            
+        </div> 
         <div class ="main-container"></div>
     </div>
    

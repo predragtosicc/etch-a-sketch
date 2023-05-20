@@ -14,15 +14,9 @@ function drawDiv(n){
         }
     }
 }
-const nOfDivs = document.querySelector('.slider');
-nOfDivs.addEventListener('input', function() {
-    document.querySelector('.slider-label').textContent = this.value.toString() + "x" + this.value.toString();
-    nOfDivs.setAttribute('value', this.value);
-    nOfDivs.refresh();  
-    console.log(nOfDivs.value);
-});
 
-drawDiv(nOfDivs.value)
+
+drawDiv(64);
 
 // Creating a array out of all the row divs
 const divs = document.querySelectorAll('.row-div');
