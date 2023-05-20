@@ -1,5 +1,18 @@
 
 
+function colorDivs(){
+    // Creating a array out of all the row divs
+    const divs = document.querySelectorAll('.row-div');
+    const divsArr = Array.from(divs);
+
+    // Looping over row-diws and changing color upon hovering over them
+    divsArr.forEach(div => {
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = 'black';
+        })
+    });
+}
+
 function drawDiv(n){
     // Checking for children, reseting the board
     let mainContainer = document.querySelector('.main-container');
@@ -24,16 +37,7 @@ const boardSizeArr = Array.from(boardSize);
 boardSizeArr.forEach(size => {
     size.addEventListener('click', () => {
         console.log(size.value)  
-        drawDiv(size.value)     
+        drawDiv(size.value)
+        colorDivs()     
     })
 }); 
-// Creating a array out of all the row divs
-const divs = document.querySelectorAll('.row-div');
-const divsArr = Array.from(divs);
-
-// Looping over row-diws and changing color upon hovering over them
-divsArr.forEach(div => {
-    div.addEventListener('mouseover', () => {
-        div.style.backgroundColor = 'black';
-    })
-});
