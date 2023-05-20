@@ -16,7 +16,7 @@ function drawDiv(n){
 }
 
 
-drawDiv(64);
+
 
 // Creating a array out of all the row divs
 const divs = document.querySelectorAll('.row-div');

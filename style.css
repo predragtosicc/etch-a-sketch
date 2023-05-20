@@ -10,6 +10,7 @@ body{
     display: flex;
     height: 600px;
     width: 800px;
+    gap: 20px;
 }
 
 .main-container{
@@ -33,10 +34,9 @@ body{
 .grid-size {
     height: 200px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items:flex-start; 
-    gap: 40px;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
 }
 
 
